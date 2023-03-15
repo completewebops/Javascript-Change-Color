@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Color Changer</title>
+	<style type="text/css">
+		body {
+			background-color: white;
+			color: black;
+			text-align: center; 
+		}
+		button {
+			background-color: green;
+			color: white;
+			padding: 10px 20px; 
+			border: none; 
+			cursor: pointer; 
+		}
+		.black {
+			background-color: black;
+			color: white;
+		}
+	</style>
+</head>
+<body>
+      <h1>Text Color</h1>
+      <p>More Text</p>
+	<button onclick="changeColor()">Toggle Color</button>
+<!--You will want to change the code obviously if you have a differt color to change out-->
+	<script type="text/javascript">
+		function changeColor() {
+			var body = document.getElementsByTagName("body")[0];
+			if (body.classList.contains("black")) {
+				body.classList.remove("black");
+			} else {
+				body.classList.add("black");
+			}
+		}
+	</script>
+</body>
+</html>
